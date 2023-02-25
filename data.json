@@ -1,0 +1,28 @@
+{
+  "name": "Milos Djurica",
+  "avatar": "https://pbs.twimg.com/profile_images/1561516943122784262/5SHzziae_400x400.jpg",
+  "links": [
+    {
+      "title": "My personal site",
+      "url": "https://github.com/milosdjurica"
+    },
+    {
+      "title": "Twitter",
+      "url": "https://twitter.com/djurica_milos"
+    },
+    {
+      "title": "Github",
+      "url": "https://github.com/milosdjurica"
+    }
+  ],
+  "socials": [
+    {
+      "title": "Twitter",
+      "url": "https://twitter.com/djurica_milos"
+    },
+    {
+      "title": "Github",
+      "url": "https://github.com/milosdjurica"
+    }
+  ]
+}
