@@ -8,12 +8,16 @@
       "image": "https://pbs.twimg.com/profile_images/1561516943122784262/5SHzziae_400x400.jpg"
     },
     {
-      "title": "My Personal Site",
+      "title": "Twitter",
       "href": "https://twitter.com/djurica_milos"
     },
     {
       "title": "Github",
       "href": "https://github.com/milosdjurica"
+    },
+    {
+      "title": "Vercel",
+      "href": "https://twitter.com/djurica_milos"
     }
   ],
   "socials": [
