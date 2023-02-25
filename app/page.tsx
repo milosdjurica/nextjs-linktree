@@ -21,10 +21,10 @@ export default function Home() {
       <div className="text-white flex items-center gap-4 mt-8">
         {data.socials.map((icon: any) => {
           if (icon.title === "Twitter") {
-            return <TwitterIcon />;
+            return <TwitterIcon key="twitterIcon" />;
           }
           if (icon.title === "Github") {
-            return <GithubIcon />;
+            return <GithubIcon key="githubIcon" />;
           }
         })}
       </div>

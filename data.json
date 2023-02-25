@@ -4,8 +4,7 @@
   "links": [
     {
       "title": "My Personal Site",
-      "href": "#",
-      "image": "https://pbs.twimg.com/profile_images/1561516943122784262/5SHzziae_400x400.jpg"
+      "href": "#"
     },
     {
       "title": "Twitter",
@@ -17,7 +16,7 @@
     },
     {
       "title": "Vercel",
-      "href": "https://twitter.com/djurica_milos"
+      "href": "https://vercel.com/milosdjurica"
     }
   ],
   "socials": [
