@@ -36,7 +36,7 @@ export default async function HomePage() {
   }
 
   return (
-    <div className="flex items-center flex-col mx-auto w-full mt-16 mb-40 px-8">
+    <div className="flex items-center flex-col mt-16 px-8">
       <Image
         className="rounded-full"
         alt={data.name}

@@ -14,7 +14,7 @@ export default function LinkCard({
       href={href}
       className="flex items-center p-1 
       mb-3 w-full bg-gray-100
-       rounded-md hover:scale-105 transition-all max-w-3xl"
+      rounded-md hover:scale-105 transition-all max-w-3xl"
     >
       <div className="flex w-full">
         <div className="w-10 h-10 flex justify-center items-center">
