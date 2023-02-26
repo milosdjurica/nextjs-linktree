@@ -2,9 +2,37 @@ import GithubIcon from "@/components/GithubIcon";
 import LinkCard from "@/components/LinkCard";
 import TwitterIcon from "@/components/TwitterIcon";
 import Image from "next/image";
-import data from "../data.json";
+import { get } from "@vercel/edge-config";
+import { redirect } from "next/navigation";
 
-export default function Home() {
+export const dynamic = "force-dynamic",
+  runtime = "edge";
+
+type DataType = {
+  name: string;
+  avatar: string;
+  links: LinkType[];
+  socials: SocialsType[];
+};
+
+type LinkType = {
+  href: string;
+  title: string;
+  image?: string;
+};
+
+type SocialsType = {
+  title: string;
+  href: string;
+};
+
+export default async function HomePage() {
+  const data: DataType | undefined = await get("linktree");
+
+  if (!data) {
+    redirect("https://github.com/milosdjurica");
+  }
+
   return (
     <div className="flex items-center flex-col mx-auto w-full mt-16 mb-40 px-8">
       <Image
@@ -15,16 +43,16 @@ export default function Home() {
         height={96}
       />
       <h1 className="font-bold mt-4 mb-8 text-xl text-white">{data.name}</h1>
-      {data.links.map((link: any) => {
+      {data.links.map((link) => {
         return <LinkCard key={link.href} {...link} />;
       })}
       <div className="text-white flex items-center gap-4 mt-8">
-        {data.socials.map((icon: any) => {
-          if (icon.title === "Twitter") {
-            return <TwitterIcon key="twitterIcon" />;
+        {data.socials.map((social) => {
+          if (social.title === "Twitter") {
+            return <TwitterIcon key={social.title} />;
           }
-          if (icon.title === "Github") {
-            return <GithubIcon key="githubIcon" />;
+          if (social.title === "Github") {
+            return <GithubIcon key={social.title} />;
           }
         })}
       </div>
