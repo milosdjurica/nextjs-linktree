@@ -4,7 +4,9 @@ import TwitterIcon from "@/components/TwitterIcon";
 import Image from "next/image";
 import { get } from "@vercel/edge-config";
 import { redirect } from "next/navigation";
+import LinkedinIcon from "@/components/LinkedinIcon";
 
+// forces to reload data on every refresh
 export const dynamic = "force-dynamic",
   runtime = "edge";
 
@@ -48,6 +50,9 @@ export default async function HomePage() {
       })}
       <div className="text-white flex items-center gap-4 mt-8">
         {data.socials.map((social) => {
+          if (social.title === "Linkedin") {
+            return <LinkedinIcon key={social.title} />;
+          }
           if (social.title === "Twitter") {
             return <TwitterIcon key={social.title} />;
           }
